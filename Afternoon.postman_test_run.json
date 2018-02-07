@@ -1,0 +1,779 @@
+{
+	"id": "32d592fe-058b-49bc-9eb0-0ad768086feb",
+	"name": "Endpoint Testing Afternoon",
+	"allTests": [],
+	"timestamp": "2018-02-07T19:07:18.792Z",
+	"collection_id": "cdb6d0c6-5970-37f3-7f29-6d174043d469",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "no-environment",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "cdb6d0c6-5970-37f3-7f29-6d174043d469",
+		"name": "Endpoint Testing Afternoon",
+		"description": "",
+		"order": [
+			"47a34e00-8ed3-1296-8743-e0b69779c7a7",
+			"132c12db-6d0e-9c98-c235-2e78ab915992",
+			"3600c21a-dbc7-e4c8-5218-8c4288e13641",
+			"233630ff-4445-cfac-2759-ebd03e6a5bf1",
+			"e6c46b64-0e74-6c08-14c3-a384cbd5fef3",
+			"425bb945-5849-7e15-9529-ece0dc7609d0",
+			"19270458-5128-b431-5924-b72e312f2976",
+			"c9decc45-2e95-f379-adfc-763d9efc2644",
+			"03360445-b161-4fd6-ff07-086daa4a5011",
+			"3c29b05e-240b-e6fc-7c98-f0799fc33eec",
+			"a4fdbb2d-849d-7fb9-8c54-746c12ad3a2c"
+		],
+		"folders": [],
+		"folders_order": [],
+		"timestamp": 0,
+		"synced": true,
+		"remote_id": 0,
+		"owner": 0,
+		"sharedWithTeam": false,
+		"subscribed": false,
+		"remoteLink": "",
+		"remoteLinkUpdatedAt": null,
+		"public": false,
+		"createdAt": 1518027963573,
+		"updatedAt": 1518027963573,
+		"write": true,
+		"published": false,
+		"favorite": false,
+		"permissions": {},
+		"syncedPermissions": {},
+		"events": [],
+		"variables": [],
+		"auth": null
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"enabled": true,
+			"key": "data_length",
+			"type": "text",
+			"value": "9"
+		},
+		{
+			"enabled": true,
+			"key": "productID_0",
+			"type": "text",
+			"value": "1"
+		},
+		{
+			"enabled": true,
+			"key": "productID_1",
+			"type": "text",
+			"value": "2"
+		},
+		{
+			"enabled": true,
+			"key": "productID_2",
+			"type": "text",
+			"value": "3"
+		},
+		{
+			"enabled": true,
+			"key": "username",
+			"type": "text",
+			"value": "user 0"
+		},
+		{
+			"enabled": true,
+			"key": "total",
+			"type": "text",
+			"value": "0"
+		},
+		{
+			"enabled": true,
+			"key": "item0",
+			"type": "text",
+			"value": "{\"id\":1,\"title\":\"Snapback ( red )\",\"category\":\"hats\",\"price\":10}"
+		},
+		{
+			"enabled": true,
+			"key": "item1",
+			"type": "text",
+			"value": "{\"id\":2,\"title\":\"Snapback ( blue )\",\"category\":\"hats\",\"price\":10}"
+		}
+	],
+	"results": [
+		{
+			"name": "GET - All Users",
+			"id": "47a34e00-8ed3-1296-8743-e0b69779c7a7",
+			"url": "http://localhost:3535/api/users",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"get users": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"get users": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"36"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"get users": false
+				}
+			],
+			"time": "36",
+			"totalRequestTime": "36",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET - User by ID",
+			"id": "132c12db-6d0e-9c98-c235-2e78ab915992",
+			"url": "localhost:3535/api/users/9",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"has length of 1": true,
+				"has object": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"has length of 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"has object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"12"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"has length of 1": true,
+					"has object": true
+				}
+			],
+			"time": "12",
+			"totalRequestTime": "12",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET - User by ID ( error )",
+			"id": "3600c21a-dbc7-e4c8-5218-8c4288e13641",
+			"url": "localhost:3535/api/users/id",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"Status code is 400": true,
+				"error message is expected": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"error message is expected": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"4"
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"error message is expected": true
+				}
+			],
+			"time": "4",
+			"totalRequestTime": "4",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET - User with Query",
+			"id": "233630ff-4445-cfac-2759-ebd03e6a5bf1",
+			"url": "http://localhost:3535/api/users?firstName=t",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"return data has length greater than": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"return data has length greater than": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"return data has length greater than": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET - User with Query ( error )",
+			"id": "e6c46b64-0e74-6c08-14c3-a384cbd5fef3",
+			"url": "http://localhost:3535/api/users?citty=new york",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Improper query sent in request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Improper query sent in request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"3"
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Improper query sent in request": true
+				}
+			],
+			"time": "3",
+			"totalRequestTime": "3",
+			"iterationResults": {}
+		},
+		{
+			"name": "PUT - Update user by ID",
+			"id": "425bb945-5849-7e15-9529-ece0dc7609d0",
+			"url": "http://localhost:3535/api/users/23",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"returned data is an Array with a length of 1": true,
+				"email to be": true,
+				"city to be": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned data is an Array with a length of 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"email to be": {
+					"pass": 1,
+					"fail": 0
+				},
+				"city to be": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"11"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"returned data is an Array with a length of 1": true,
+					"email to be": true,
+					"city to be": true
+				}
+			],
+			"time": "11",
+			"totalRequestTime": "11",
+			"iterationResults": {}
+		},
+		{
+			"name": "PUT - Update user by ID ( error )",
+			"id": "19270458-5128-b431-5924-b72e312f2976",
+			"url": "http://localhost:3535/api/users/userId",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"Status code is 400": true,
+				"verify the returned message is": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify the returned message is": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"verify the returned message is": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST - Create user",
+			"id": "c9decc45-2e95-f379-adfc-763d9efc2644",
+			"url": "http://localhost:3535/api/users",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Returned data is an Array with a length of 1": true,
+				"Returned user is expected": true,
+				"Returned user id is a number": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returned data is an Array with a length of 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returned user is expected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returned user id is a number": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"4"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Returned data is an Array with a length of 1": true,
+					"Returned user is expected": true,
+					"Returned user id is a number": true
+				}
+			],
+			"time": "4",
+			"totalRequestTime": "4",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST - Create user ( error )",
+			"id": "03360445-b161-4fd6-ff07-086daa4a5011",
+			"url": "http://localhost:3535/api/users",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"Status code is 400": true,
+				"verify the returned message is": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify the returned message is": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"verify the returned message is": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "DELETE - Remove user",
+			"id": "3c29b05e-240b-e6fc-7c98-f0799fc33eec",
+			"url": "http://localhost:3535/api/users/66",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"15"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "15",
+			"totalRequestTime": "15",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 22,
+	"totalFail": 1,
+	"totalTime": 102,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "GET - All Users",
+			"id": "47a34e00-8ed3-1296-8743-e0b69779c7a7",
+			"url": "http://localhost:3535/api/users",
+			"time": "2018-02-07T19:07:18.792Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"get users": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "GET - User by ID",
+			"id": "132c12db-6d0e-9c98-c235-2e78ab915992",
+			"url": "localhost:3535/api/users/9",
+			"time": "2018-02-07T19:07:18.792Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"has length of 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"has object": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET - User by ID ( error )",
+			"id": "3600c21a-dbc7-e4c8-5218-8c4288e13641",
+			"url": "localhost:3535/api/users/id",
+			"time": "2018-02-07T19:07:18.792Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"error message is expected": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET - User with Query",
+			"id": "233630ff-4445-cfac-2759-ebd03e6a5bf1",
+			"url": "http://localhost:3535/api/users?firstName=t",
+			"time": "2018-02-07T19:07:18.792Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"return data has length greater than": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET - User with Query ( error )",
+			"id": "e6c46b64-0e74-6c08-14c3-a384cbd5fef3",
+			"url": "http://localhost:3535/api/users?citty=new york",
+			"time": "2018-02-07T19:07:18.792Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Improper query sent in request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "PUT - Update user by ID",
+			"id": "425bb945-5849-7e15-9529-ece0dc7609d0",
+			"url": "http://localhost:3535/api/users/23",
+			"time": "2018-02-07T19:07:18.792Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned data is an Array with a length of 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"email to be": {
+					"pass": 1,
+					"fail": 0
+				},
+				"city to be": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "PUT - Update user by ID ( error )",
+			"id": "19270458-5128-b431-5924-b72e312f2976",
+			"url": "http://localhost:3535/api/users/userId",
+			"time": "2018-02-07T19:07:18.792Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify the returned message is": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "POST - Create user",
+			"id": "c9decc45-2e95-f379-adfc-763d9efc2644",
+			"url": "http://localhost:3535/api/users",
+			"time": "2018-02-07T19:07:18.792Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returned data is an Array with a length of 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returned user is expected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returned user id is a number": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "POST - Create user ( error )",
+			"id": "03360445-b161-4fd6-ff07-086daa4a5011",
+			"url": "http://localhost:3535/api/users",
+			"time": "2018-02-07T19:07:18.792Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify the returned message is": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DELETE - Remove user",
+			"id": "3c29b05e-240b-e6fc-7c98-f0799fc33eec",
+			"url": "http://localhost:3535/api/users/66",
+			"time": "2018-02-07T19:07:18.792Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}
